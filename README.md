@@ -8,7 +8,7 @@ It extends the standard `duckdb` module with async versions of all the standard 
 plus context managers for automatically closing connections and cursors:
 
 ``` python
-from duckdb.async import AsyncConnection
+from duckdb.asyncio import AsyncConnection
 
 async with AsyncConnection(...) as conn:
     await conn.execute("INSERT INTO some_table ...")
@@ -23,7 +23,7 @@ async with AsyncConnection(...) as conn:
 It can also be used in the traditional, procedural manner:
 
 ``` python
-from duckdb.async import AsyncConnection
+from duckdb.asyncio import AsyncConnection
 
 db = await AsyncConnection(...)
 cursor = db.cursor()
